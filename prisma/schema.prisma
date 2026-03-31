@@ -1,0 +1,150 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model ProductCategory {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String?
+  icon        String?
+  imageUrl    String?
+  status      String   @default("active")
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  products     Product[]
+  portfolios   PortfolioItem[]
+  pricingTiers PricingTier[]
+}
+
+model Product {
+  id               String   @id @default(cuid())
+  categoryId       String
+  name             String
+  slug             String   @unique
+  shortDescription String?
+  fullDescription  String?
+  images           String?
+  variants         String?
+  moq              Int?
+  leadTime         String?
+  startingPrice    Float?
+  status           String   @default("active")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  category ProductCategory @relation(fields: [categoryId], references: [id])
+}
+
+model PortfolioItem {
+  id          String   @id @default(cuid())
+  categoryId  String?
+  imageUrl    String
+  title       String
+  description String?
+  clientName  String?
+  status      String   @default("published")
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  category ProductCategory? @relation(fields: [categoryId], references: [id])
+}
+
+model Testimonial {
+  id           String   @id @default(cuid())
+  clientName   String
+  businessName String?
+  reviewText   String
+  rating       Int      @default(5)
+  photoUrl     String?
+  status       String   @default("published")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model PricingTier {
+  id                String   @id @default(cuid())
+  productCategoryId String
+  label             String
+  quantityRange     String
+  pricePerUnit      Float
+  notes             String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  productCategory ProductCategory @relation(fields: [productCategoryId], references: [id])
+}
+
+model Post {
+  id            String    @id @default(cuid())
+  title         String
+  slug          String    @unique
+  excerpt       String?
+  body          String
+  featuredImage String?
+  author        String?
+  publishedAt   DateTime?
+  status        String    @default("draft")
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Job {
+  id         String    @id @default(cuid())
+  title      String
+  department String?
+  location   String?
+  summary    String
+  deadline   DateTime?
+  status     String    @default("active")
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+}
+
+model Lead {
+  id              String   @id @default(cuid())
+  type            String
+  fullName        String
+  businessName    String?
+  phone           String
+  email           String
+  subject         String?
+  message         String?
+  productCategory String?
+  product         String?
+  quantity        Int?
+  designReady     String?
+  deliveryDate    String?
+  notes           String?
+  attachmentUrl   String?
+  status          String   @default("new")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model AdminUser {
+  id           String    @id @default(cuid())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         String    @default("admin")
+  status       String    @default("active")
+  lastLoginAt  DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Settings {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
