@@ -4,7 +4,7 @@ import TestimonialsClient from './TestimonialsClient';
 
 export const metadata: Metadata = {
     title: 'Testimonials',
-    description: 'Read what our clients say about Impress Ad. Trusted by 5,000+ happy customers across Chittagong.',
+    description: 'Read what our clients say about Prokash Ad. Trusted by 5,000+ happy customers across Chittagong.',
 };
 
 export default async function TestimonialsPage() {

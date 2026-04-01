@@ -52,7 +52,7 @@ export const DEMO_POSTS = [
         title: '10 Creative Ways to Use Custom Printed Mugs',
         slug: '10-creative-ways-custom-mugs',
         excerpt: 'Discover how custom mugs can boost your brand visibility and make perfect gifts.',
-        author: 'Impress Ad Team',
+        author: 'Prokash Ad Team',
         publishedAt: '2024-03-15',
         featuredImage: '/images/blog/mugs-blog.png',
         body: 'Custom printed mugs are one of the most versatile promotional products available. Whether for corporate giveaways, event merchandise, or personal gifts, a well-designed mug leaves a lasting impression.\n\n## 1. Corporate Welcome Kits\nInclude a branded mug in your new employee welcome box.\n\n## 2. Client Appreciation Gifts\nSend personalized mugs to your top clients.\n\n## 3. Event Merchandise\nOffer custom mugs at conferences and trade shows.\n\n## 4. Restaurant & Cafe Branding\nUse branded mugs to enhance your dining experience.\n\n## 5. Wedding Favors\nCreate personalized mugs as memorable wedding keepsakes.'
@@ -62,7 +62,7 @@ export const DEMO_POSTS = [
         title: 'The Ultimate Guide to Choosing the Right Visiting Card',
         slug: 'guide-choosing-right-visiting-card',
         excerpt: 'Your visiting card is your first impression. Learn how to choose the perfect one for your brand.',
-        author: 'Impress Ad Team',
+        author: 'Prokash Ad Team',
         publishedAt: '2024-03-20',
         featuredImage: '/images/blog/cards-blog.png',
         body: 'A visiting card speaks volumes about your brand before you even say a word.\n\n## Material Matters\nChoose from standard, premium, or specialty materials.\n\n## Finish Options\n- Matte: Elegant and understated\n- Glossy: Vibrant and eye-catching\n- Spot UV: Premium with selective shine\n- Embossed: Tactile and luxurious\n\n## Design Tips\n1. Keep it clean and uncluttered\n2. Use your brand colors consistently\n3. Include essential contact information only\n4. Consider QR codes for digital connectivity'
@@ -70,7 +70,7 @@ export const DEMO_POSTS = [
 ];
 
 export const DEMO_TESTIMONIALS = [
-    { id: 't1', clientName: 'Rafiq Ahmed', businessName: 'Ahmed Traders', reviewText: 'Impress Ad delivered 500 custom mugs for our corporate event in just 3 days. The print quality was outstanding.', rating: 5 },
+    { id: 't1', clientName: 'Rafiq Ahmed', businessName: 'Ahmed Traders', reviewText: 'Prokash Ad delivered 500 custom mugs for our corporate event in just 3 days. The print quality was outstanding.', rating: 5 },
     { id: 't2', clientName: 'Nasreen Begum', businessName: 'Fashionista Boutique', reviewText: 'We ordered custom T-shirts and shopping bags for our boutique launch. The attention to detail was impressive.', rating: 5 },
 ];
 

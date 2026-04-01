@@ -1,165 +1,163 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FaRocket, FaPrint, FaHandshake, FaPalette, FaTruck, FaHeadset, FaUsers, FaStar } from 'react-icons/fa';
+import { 
+  FaPrint, FaTruck, FaPalette, FaCheckCircle, FaArrowRight, FaBuilding
+} from 'react-icons/fa';
 import Link from 'next/link';
 
 const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  hidden: { opacity: 0, y: 15 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 const differentiators = [
-    { icon: FaPrint, title: 'Premium Print Quality', desc: 'State-of-the-art printing technology ensuring vibrant colors and sharp details on every product.' },
-    { icon: FaTruck, title: 'Fast Delivery', desc: 'Quick turnaround times with most orders delivered within 2-5 business days.' },
-    { icon: FaPalette, title: 'Custom Design Support', desc: 'Our in-house design team can help create or refine your designs for optimal print results.' },
-    { icon: FaHandshake, title: 'Affordable Pricing', desc: 'Competitive pricing with bulk discounts. Quality printing doesn\'t have to break the bank.' },
-    { icon: FaHeadset, title: 'Dedicated Support', desc: 'Personal attention to every order with WhatsApp support for quick communication.' },
-    { icon: FaStar, title: 'Trusted by 5000+ Clients', desc: 'A decade of experience serving businesses, event organizers, and individuals across Chittagong.' },
+  { icon: FaPrint, title: 'Precision Print', desc: 'Japanese industrial accuracy.' },
+  { icon: FaTruck, title: 'Rapid Delivery', desc: '48-hour turnarounds.' },
+  { icon: FaPalette, title: 'Design Studio', desc: 'Print-ready perfection.' },
 ];
 
-export default function AboutPage() {
-    return (
-        <>
-            {/* Hero */}
-            <section className="relative pt-32 pb-20 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-900 overflow-hidden">
-                <div className="absolute inset-0 opacity-10" style={{
-                    backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.3) 1px, transparent 0)',
-                    backgroundSize: '32px 32px',
-                }} />
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                        <h1 className="text-4xl sm:text-5xl font-heading font-extrabold text-white mb-4">About Impress Ad</h1>
-                        <p className="text-white/80 text-lg max-w-2xl mx-auto">
-                            Your one-stop printing and branding partner in Chittagong, Bangladesh
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
+const pricingData = [
+  { name: 'Ceramic Mugs', price: '250', moq: '10 pcs', note: 'Full Color' },
+  { name: 'Branded T-Shirts', price: '400', moq: '50 pcs', note: 'Cotton' },
+  { name: 'Business Cards', price: '3.5', moq: '200 pcs', note: 'Spot UV' },
+  { name: 'Vinyl Stickers', price: '2.0', moq: '500 pcs', note: 'UV Print' },
+];
 
-            {/* Story */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-orange/10 text-accent-orange text-sm font-semibold mb-6">
-                                🏢 Our Story
-                            </div>
-                            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary-900 mb-6">
-                                A Decade of Printing Excellence in Chittagong
-                            </h2>
-                            <div className="space-y-4 text-text-600 leading-relaxed">
-                                <p>
-                                    Founded over a decade ago at Wireless Moor, Chittagong, Impress Ad started with a simple mission: to provide affordable, high-quality printing services to local businesses and individuals.
-                                </p>
-                                <p>
-                                    What began as a small print shop has grown into a full-service branding and promotional products company, serving over 5,000 happy customers — from small startups to large corporations and event organizers across Bangladesh.
-                                </p>
-                                <p>
-                                    Today, we offer a comprehensive range of products including custom mugs, T-shirts, banners, visiting cards, brochures, stickers, corporate gifts, and branded packaging. Our commitment to quality, fast delivery, and customer satisfaction remains at the core of everything we do.
-                                </p>
-                            </div>
-                        </motion.div>
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                            <div className="relative">
-                                <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary-700/10 to-accent-orange/10 border border-border-200 flex items-center justify-center">
-                                    <div className="text-center p-8">
-                                        <div className="text-6xl mb-4">🖨️</div>
-                                        <h3 className="font-heading font-bold text-2xl text-primary-900 mb-2">Impress Ad</h3>
-                                        <p className="text-text-600">Wireless Moor, Chittagong</p>
-                                        <p className="text-accent-orange font-semibold mt-2">Est. 2014</p>
-                                    </div>
-                                </div>
-                                <div className="absolute -bottom-2 -right-2 md:-bottom-4 md:-right-4 w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-accent-orange flex items-center justify-center text-white shadow-xl">
-                                    <div className="text-center">
-                                        <div className="text-xl md:text-2xl font-bold">10+</div>
-                                        <div className="text-[10px] md:text-xs">Years</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
+export default function AboutPricingPage() {
+  return (
+    <div className="bg-white min-h-screen text-primary-900">
+      {/* ═══════ COMPACT WHITE HERO ═══════ */}
+      <section className="relative pt-32 pb-16 bg-white border-b border-bg-100 overflow-hidden text-center sm:text-left">
+        <div className="absolute inset-0 bg-[url('/images/dots.png')] opacity-5 pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl">
+            <span className="inline-block bg-primary-950 text-white text-[9px] font-black uppercase tracking-[0.2em] px-3 py-1 mb-6">
+              Est. 2014 • Chittagong
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-heading font-black text-primary-950 mb-6 tracking-tighter leading-tight uppercase italic border-l-8 border-accent-orange pl-6">
+              Legacy of <span className="text-accent-orange">Quality</span>
+            </h1>
+            <p className="text-text-500 text-lg font-bold leading-relaxed italic border-l-8 border-bg-100 pl-6">
+              Industrial-grade print manufacturing with over 10 years of mastery in Bangladesh.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-            {/* Mission */}
-            <section className="py-16 bg-bg-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-3xl mx-auto text-center">
-                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                            <h2 className="text-3xl font-heading font-bold text-primary-900 mb-6">Our Mission</h2>
-                            <p className="text-lg text-text-600 leading-relaxed">
-                                To empower businesses and individuals with high-quality, affordable printing and branding solutions that help them stand out, build trust, and grow their brand presence — all with fast delivery and exceptional customer service.
-                            </p>
-                        </motion.div>
-                    </div>
+      {/* ═══════ COMPACT STORY (CLEAN WHITE) ═══════ */}
+      <section className="py-20 bg-white border-b border-bg-100">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <h2 className="text-3xl font-heading font-black text-primary-950 mb-6 tracking-tighter uppercase italic underline decoration-4 underline-offset-8 decoration-accent-orange">
+                A Brand Built on Precision
+              </h2>
+              <div className="space-y-6 text-text-500 text-base font-bold leading-relaxed">
+                <p>
+                  From a precision startup at Wireless Moor to Chittagong&apos;s leading print manufacturing house, our journey is defined by <span className="text-primary-950">Accuracy.</span>
+                </p>
+                <p>
+                  Today, we serve over 5,000 corporate identities across Bangladesh, bridging creative vision and physical manifestation.
+                </p>
+              </div>
+              
+              <div className="mt-10 flex gap-10">
+                <div>
+                  <div className="text-4xl font-black text-primary-950 tracking-tighter italic"><span className="text-accent-orange">10</span>+</div>
+                  <div className="text-[9px] font-black text-text-400 uppercase tracking-widest mt-1">Years Mastery</div>
                 </div>
-            </section>
+                <div>
+                  <div className="text-4xl font-black text-primary-950 tracking-tighter italic"><span className="text-accent-orange">5k</span>+</div>
+                  <div className="text-[9px] font-black text-text-400 uppercase tracking-widest mt-1">Local Clients</div>
+                </div>
+              </div>
+            </motion.div>
 
-            {/* Why Choose Us */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-14">
-                        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary-900 mb-3">Why Choose Us</h2>
-                        <p className="text-text-600 text-lg">What sets Impress Ad apart from the rest</p>
-                    </motion.div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {differentiators.map((d, i) => (
-                            <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                                <div className="group bg-bg-50 rounded-3xl p-8 border border-border-200 hover:border-accent-orange/20 hover:shadow-lg transition-all duration-300 h-full">
-                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-700 to-primary-900 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                                        <d.icon size={24} />
-                                    </div>
-                                    <h3 className="font-heading font-bold text-lg text-primary-900 mb-3">{d.title}</h3>
-                                    <p className="text-text-600 text-sm leading-relaxed">{d.desc}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+            <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} className="relative">
+              <div className="aspect-video rounded-3xl bg-bg-50/50 border border-bg-100 overflow-hidden relative group shadow-2xl">
+                <img 
+                  src="/images/brand/shop-front.png" 
+                  alt="Prokash Ad Shop Front - Wireless Moor, CTG" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute top-4 right-4 px-3 py-1.5 bg-black/80 backdrop-blur rounded-lg border border-white/10 shadow-2xl">
+                   <div className="text-accent-orange font-black text-[8px] uppercase tracking-widest leading-none mb-1">Primary Studio</div>
+                   <div className="text-white font-bold text-[9px] mt-1 italic">Wireless Moor, CTG</div>
                 </div>
-            </section>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
-            {/* Team */}
-            <section className="py-20 bg-bg-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-14">
-                        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary-900 mb-3">Our Team</h2>
-                        <p className="text-text-600 text-lg">The people behind every perfect print</p>
-                    </motion.div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[
-                            { name: 'Md. Rahim Uddin', role: 'Founder & CEO', emoji: '👨‍💼' },
-                            { name: 'Salma Khatun', role: 'Head of Design', emoji: '👩‍🎨' },
-                            { name: 'Abdul Karim', role: 'Production Manager', emoji: '👨‍🔧' },
-                            { name: 'Nusrat Jahan', role: 'Customer Relations', emoji: '👩‍💻' },
-                        ].map((member, i) => (
-                            <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                                <div className="group text-center bg-white rounded-3xl p-8 border border-border-200 hover:shadow-lg transition-all duration-300">
-                                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-700/10 to-accent-orange/10 flex items-center justify-center text-4xl mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                        {member.emoji}
-                                    </div>
-                                    <h3 className="font-heading font-bold text-primary-900">{member.name}</h3>
-                                    <p className="text-text-600 text-sm">{member.role}</p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+      {/* ═══════ COMPACT MASTER RATE CARD (WHITE TILES) ═══════ */}
+      <section className="py-20 bg-bg-50/50">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 mb-12">
+          <motion.div initial="hidden" whileInView="visible" variants={fadeUp}>
+             <h2 className="text-3xl font-heading font-black text-primary-950 tracking-tighter uppercase italic">Rate Card</h2>
+             <p className="text-text-400 text-sm font-bold mt-2 italic">Industrial standardized pricing for corporate excellence.</p>
+          </motion.div>
+        </div>
 
-            {/* CTA */}
-            <section className="py-16 bg-gradient-to-r from-primary-900 to-primary-700">
-                <div className="max-w-3xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl font-heading font-bold text-white mb-4">Ready to Get Started?</h2>
-                    <p className="text-white/80 mb-8">Let&apos;s bring your brand to life. Contact us for a free quote today.</p>
-                    <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-accent-orange text-white rounded-2xl font-bold text-lg shadow-2xl hover:bg-orange-600 hover:scale-105 transition-all"
-                    >
-                        Get a Free Quote <FaRocket />
-                    </Link>
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pricingData.map((item, i) => (
+            <motion.div key={i} whileHover={{ y: -5 }} className="bg-white border border-bg-100 rounded-2xl p-8 hover:border-accent-orange/50 hover:shadow-2xl transition-all duration-300 relative group">
+              <div className="flex justify-between items-center mb-10">
+                <div className="w-10 h-10 rounded-xl bg-primary-950 text-accent-orange flex items-center justify-center shadow-lg">
+                   <FaCheckCircle size={18} />
                 </div>
-            </section>
-        </>
-    );
+                <div className="bg-bg-50 text-text-400 px-3 py-1 rounded-full text-[7px] font-black uppercase tracking-widest border border-bg-100">
+                  {item.note}
+                </div>
+              </div>
+
+              <h3 className="text-xl font-heading font-black text-primary-950 mb-2 uppercase tracking-tighter italic">
+                {item.name}
+              </h3>
+              <div className="text-[9px] font-black text-accent-orange uppercase tracking-widest mb-10 italic">MOQ: {item.moq}</div>
+              
+              <div className="pt-6 border-t border-bg-100 flex items-center justify-between">
+                <div className="text-[10px] font-black text-text-300 uppercase tracking-widest italic">Rate</div>
+                <div className="text-3xl font-heading font-black text-primary-950 tracking-tighter italic font-black">৳{item.price}</div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══════ COMPACT CORE VALUES (WHITE HIGHLIGHTS) ═══════ */}
+      <section className="py-20 bg-white border-y border-bg-100">
+        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+          {differentiators.map((d, i) => (
+            <motion.div key={i} initial="hidden" whileInView="visible" variants={fadeUp} className="flex gap-4">
+              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-950 text-accent-orange flex items-center justify-center shadow-xl">
+                <d.icon size={20} />
+              </div>
+              <div>
+                <h3 className="text-[11px] font-black text-primary-950 mb-2 uppercase tracking-widest italic border-b border-accent-orange w-fit">{d.title}</h3>
+                <p className="text-text-500 font-bold text-[10px] leading-relaxed italic">{d.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══════ MASTER CTA (WHITE BG) ═══════ */}
+      <section className="py-20 bg-white text-center">
+        <div className="max-w-3xl mx-auto px-5">
+           <h2 className="text-3xl font-heading font-black text-primary-950 tracking-tighter uppercase italic mb-10 border-b-4 border-accent-orange w-fit mx-auto pb-2">
+              Manifest Vision
+           </h2>
+           <Link
+            href="/contact"
+            className="inline-flex items-center gap-4 px-12 py-5 bg-accent-orange text-white rounded-2xl font-black text-xs uppercase tracking-[0.3em] shadow-2xl hover:scale-105 transition-all"
+          >
+            GET QUOTE <FaArrowRight />
+          </Link>
+          <div className="mt-12 text-text-300 text-[8px] font-black uppercase tracking-[0.4em] italic leading-none">Industrial Standard Ed. 2026</div>
+        </div>
+      </section>
+    </div>
+  );
 }

@@ -25,7 +25,7 @@ export default function AdminSettingsPage() {
         { key: 'business_address', label: 'Business Address', placeholder: 'Wireless Moor, Chittagong' },
         { key: 'facebook_url', label: 'Facebook URL', placeholder: 'https://facebook.com/impressad' },
         { key: 'instagram_url', label: 'Instagram URL', placeholder: 'https://instagram.com/impressad' },
-        { key: 'seo_title', label: 'SEO Title', placeholder: 'Impress Ad — Printing & Branding' },
+        { key: 'seo_title', label: 'SEO Title', placeholder: 'Prokash Ad — Printing & Branding' },
         { key: 'seo_description', label: 'SEO Description', placeholder: 'Your SEO meta description' },
     ];
 

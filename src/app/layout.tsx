@@ -18,8 +18,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Impress Ad — Printing, Branding & Promotional Products | Chittagong",
-    template: "%s | Impress Ad",
+    default: "Prokash Ad — Printing, Branding & Promotional Products | Chittagong",
+    template: "%s | Prokash Ad",
   },
   description:
     "Chittagong's trusted printing & branding partner. Custom mugs, T-shirts, banners, visiting cards, brochures, stickers, corporate gifts & packaging. Get a free quote today!",
@@ -31,15 +31,15 @@ export const metadata: Metadata = {
     "banner printing",
     "visiting cards",
     "promotional products bangladesh",
-    "impress ad",
+    "manifest ad",
   ],
   openGraph: {
-    title: "Impress Ad — Printing, Branding & Promotional Products",
+    title: "Prokash Ad — Printing, Branding & Promotional Products",
     description:
       "From mugs and T-shirts to banners and visiting cards — we bring your brand to life.",
     type: "website",
     locale: "en_BD",
-    siteName: "Impress Ad",
+    siteName: "Prokash Ad",
   },
 };
 

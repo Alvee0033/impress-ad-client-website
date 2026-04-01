@@ -31,10 +31,10 @@ export default function Footer() {
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-700 to-accent-orange flex items-center justify-center text-white font-bold text-lg">
-                                IA
+                                PA
                             </div>
                             <div>
-                                <span className="font-heading font-bold text-xl text-white">Impress</span>
+                                <span className="font-heading font-bold text-xl text-white">Prokash</span>
                                 <span className="font-heading font-bold text-xl text-accent-orange"> Ad</span>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ export default function Footer() {
             <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <p className="text-white/50 text-sm">
-                        © {new Date().getFullYear()} Impress Ad. All rights reserved.
+                        © {new Date().getFullYear()} Prokash Ad. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="text-white/50 hover:text-white text-sm transition-colors">

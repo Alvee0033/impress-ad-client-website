@@ -39,7 +39,7 @@ export default function AdminLoginPage() {
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-700 to-accent-orange flex items-center justify-center text-white font-bold text-xl shadow-lg">IA</div>
                     </div>
                     <h1 className="text-3xl font-heading font-bold text-white">Admin Login</h1>
-                    <p className="text-white/60 mt-2">Impress Ad Dashboard</p>
+                    <p className="text-white/60 mt-2">Prokash Ad Dashboard</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">

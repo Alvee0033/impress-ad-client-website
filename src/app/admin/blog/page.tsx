@@ -10,7 +10,7 @@ export default function AdminBlogPage() {
     const [items, setItems] = useState<Post[]>(DEMO_POSTS.map(p => ({ ...p, status: 'published' })));
     const [showForm, setShowForm] = useState(false);
     const [editing, setEditing] = useState<Post | null>(null);
-    const [form, setForm] = useState({ title: '', excerpt: '', body: '', author: 'Impress Ad Team', status: 'draft' });
+    const [form, setForm] = useState({ title: '', excerpt: '', body: '', author: 'Prokash Ad Team', status: 'draft' });
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -38,7 +38,7 @@ export default function AdminBlogPage() {
         }
         setShowForm(false);
         setEditing(null);
-        setForm({ title: '', excerpt: '', body: '', author: 'Impress Ad Team', status: 'draft' });
+        setForm({ title: '', excerpt: '', body: '', author: 'Prokash Ad Team', status: 'draft' });
     };
 
     const handleDelete = (id: string) => {
@@ -51,7 +51,7 @@ export default function AdminBlogPage() {
         <div>
             <div className="flex items-center justify-between mb-8">
                 <h1 className="text-3xl font-heading font-bold text-primary-900">Blog Posts</h1>
-                <button onClick={() => { setEditing(null); setForm({ title: '', excerpt: '', body: '', author: 'Impress Ad Team', status: 'draft' }); setShowForm(true); }} className="flex items-center gap-2 px-4 py-2 bg-accent-orange text-white rounded-xl font-semibold text-sm hover:bg-orange-600"><FaPlus /> New Post</button>
+                <button onClick={() => { setEditing(null); setForm({ title: '', excerpt: '', body: '', author: 'Prokash Ad Team', status: 'draft' }); setShowForm(true); }} className="flex items-center gap-2 px-4 py-2 bg-accent-orange text-white rounded-xl font-semibold text-sm hover:bg-orange-600"><FaPlus /> New Post</button>
             </div>
             {showForm && (
                 <div className="bg-white rounded-2xl p-6 border border-border-200 mb-8 shadow-sm">

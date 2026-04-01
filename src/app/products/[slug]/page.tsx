@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     if (!product) return {};
     return {
         title: product.name,
-        description: product.shortDescription || `${product.name} - Custom printed by Impress Ad, Chittagong`,
+        description: product.shortDescription || `${product.name} - Custom printed by Prokash Ad, Chittagong`,
     };
 }
 
